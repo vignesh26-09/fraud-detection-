@@ -114,9 +114,9 @@ def evaluate_model(y_true, y_pred, model_name):
     
     sns.heatmap(confusion_matrix(y_true, y_pred), annot=True, fmt='d')
     plt.title(f"{model_name} - Confusion Matrix")
-    plt.show()
     plt.savefig("fraud_distribution.png")
     plt.close()
+    plt.show()
 
 # Evaluate both models
 evaluate_model(y_test, lr_pred, "Logistic Regression")
@@ -138,9 +138,9 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("ROC Curve")
 plt.legend()
-plt.show()
 plt.savefig("ROC_Curve.png")
 plt.close()
+plt.show()
 
 # ------------------------------
 
@@ -157,9 +157,9 @@ feat_df = pd.DataFrame({
 plt.figure(figsize=(10,5))
 sns.barplot(x='Importance', y='Feature', data=feat_df.head(10))
 plt.title("Top 10 Important Features")
-plt.show()
 plt.savefig("feature_importance.png")
 plt.close()
+plt.show()
 
 # ------------------------------
 
