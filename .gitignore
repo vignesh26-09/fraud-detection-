@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.env
+credit_card_fraud_10k.csv 
